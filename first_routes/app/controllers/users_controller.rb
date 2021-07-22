@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
     
     def index 
-        if params.has_key?(:id)
-            @users = User.where(id: params[:id]) # params[:artist_id] = 1 
+        # debugger
+        if params.has_key?(:username)
+            @users = User.where(username: params[:username]) # params[:artist_id] = 1 
         else
             @users = User.all 
         end

@@ -23,3 +23,8 @@ art3 = Artwork.create(title: 'howdy', image_url: 'cc', artist_id: 1)
 art_share1 = ArtworkShare.create(artwork_id: 1, viewer_id: 1)
 art_share2 = ArtworkShare.create(artwork_id: 1, viewer_id: 2)
 art_share3 = ArtworkShare.create(artwork_id: 3, viewer_id: 3)
+
+comment1 = Comment.create(commenter_id: 1, artwork_id: 1, body: "this is cool!")
+comment2 = Comment.create(commenter_id: 2, artwork_id: 2, body: "who made it?!")
+comment3 = Comment.create(commenter_id: 3, artwork_id: 3, body: "Simon, you are amazing!")
+
