@@ -1,7 +1,13 @@
 class UsersController < ApplicationController
     
     def index 
-        render json: User.all 
+        if params.has_key?(:id)
+            @users = User.where(id: params[:id]) # params[:artist_id] = 1 
+        else
+            @users = User.all 
+        end
+
+        render json: @users 
     end
 
     def create
